@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alexandra Grace — Personal Pilates &amp; Lagree Training in London</title>
+<meta name="description" content="One-to-one Pilates and Lagree with Alexandra Grace — Royal Ballet School trained, 10+ years' experience, coaching at London's leading studios. I come to you, and book the studio if you need one." />
+
+<!-- ============================================================
+     The only things left to add are your testimonials (search
+     "[Add a") and, optionally, a tidier form inbox via FORM_ENDPOINT
+     near the bottom. Everything else is filled in.
+============================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#23271f;
+    --ink-soft:#2e3328;
+    --chalk:#f2eee5;
+    --chalk-2:#e8e2d4;
+    --paper:#faf8f2;
+    --olive:#404a36;
+    --olive-soft:#566049;
+    --stone:#6c6757;
+    --stone-light:#94907e;
+    --brass:#a87f33;
+    --brass-bright:#c39a48;
+    --line:rgba(35,39,31,.14);
+    --line-dark:rgba(242,238,229,.16);
+    --display:'Fraunces',Georgia,serif;
+    --body:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --maxw:1180px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--body);
+    background:var(--chalk);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  .eyebrow{
+    font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+    font-weight:600;color:var(--brass);
+    display:inline-flex;align-items:center;gap:.7em;
+  }
+  .eyebrow::before{
+    content:"";width:26px;height:1px;background:var(--brass);display:inline-block;
+  }
+
+  h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.04;letter-spacing:-.01em}
+  h2{font-size:clamp(2rem,4.6vw,3.3rem)}
+  h3{font-size:1.45rem;line-height:1.1}
+  p{color:var(--stone);max-width:62ch}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:.6em;
+    font-family:var(--body);font-weight:600;font-size:.95rem;
+    padding:.95em 1.6em;border-radius:100px;border:1px solid transparent;
+    cursor:pointer;transition:all .25s ease;letter-spacing:.01em;
+  }
+  .btn--primary{background:var(--ink);color:var(--chalk)}
+  .btn--primary:hover{background:var(--brass);color:#fff;transform:translateY(-2px)}
+  .btn--ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn--ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+  .btn--brass{background:var(--brass);color:#fff}
+  .btn--brass:hover{background:var(--brass-bright);transform:translateY(-2px)}
+  .btn .arrow{transition:transform .25s ease}
+  .btn:hover .arrow{transform:translate(3px,-3px)}
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:60;
+    background:rgba(242,238,229,.82);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav__inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:.6em;font-family:var(--display);font-size:1.18rem;font-weight:600;letter-spacing:-.01em}
+  .brand svg{flex:none}
+  .nav__links{display:flex;align-items:center;gap:2rem}
+  .nav__links a{font-size:.92rem;font-weight:500;color:var(--stone);transition:color .2s}
+  .nav__links a:hover{color:var(--ink)}
+  .nav__cta{display:inline-flex}
+  .nav__toggle{display:none;background:none;border:none;cursor:pointer}
+  @media(max-width:860px){
+    .nav__links a:not(.nav__cta){display:none}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:clamp(56px,9vw,110px) 0 0}
+  .hero__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end}
+  .hero h1{font-size:clamp(2.7rem,7vw,5.4rem);letter-spacing:-.025em}
+  .hero h1 em{font-style:italic;font-weight:400;color:var(--olive)}
+  .hero__lead{margin:1.6rem 0 2rem;font-size:1.12rem;max-width:46ch}
+  .hero__actions{display:flex;flex-wrap:wrap;gap:14px}
+  .hero__panel{
+    background:var(--ink);color:var(--chalk);border-radius:18px;
+    padding:30px 30px 34px;position:relative;overflow:hidden;
+  }
+  .hero__panel h4{font-family:var(--display);font-size:1.3rem;font-weight:500;margin-bottom:.5rem}
+  .hero__panel p{color:rgba(242,238,229,.72);font-size:.96rem;max-width:none}
+  .hero__panel .tag{
+    display:inline-block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--brass-bright);font-weight:600;margin-bottom:1rem;
+  }
+  .hero__photo-note{
+    margin-top:18px;border:1px dashed var(--line-dark);border-radius:12px;
+    padding:14px 16px;font-size:.8rem;color:rgba(242,238,229,.55);
+  }
+  @media(max-width:860px){
+    .hero__grid{grid-template-columns:1fr;gap:34px}
+  }
+
+  /* spring divider */
+  .spring{display:block;width:100%;height:48px;color:var(--brass);opacity:.9}
+  .spring path{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+
+  /* ---------- USP STRIP ---------- */
+  .strip{background:var(--olive);color:var(--chalk);margin-top:clamp(48px,7vw,84px)}
+  .strip__inner{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .strip__item{padding:30px 28px;border-left:1px solid var(--line-dark)}
+  .strip__item:first-child{border-left:none}
+  .strip__item strong{font-family:var(--display);font-size:1.15rem;font-weight:500;display:block;margin-bottom:.25rem}
+  .strip__item span{font-size:.92rem;color:rgba(242,238,229,.7)}
+  @media(max-width:760px){
+    .strip__inner{grid-template-columns:1fr}
+    .strip__item{border-left:none;border-top:1px solid var(--line-dark)}
+    .strip__item:first-child{border-top:none}
+  }
+
+  /* ---------- SECTIONS ---------- */
+  .section{padding:clamp(64px,9vw,116px) 0}
+  .section--paper{background:var(--paper)}
+  .section__head{max-width:60ch;margin-bottom:clamp(40px,5vw,60px)}
+  .section__head h2{margin-top:.7rem}
+  .section__head p{margin-top:1rem;font-size:1.08rem}
+
+  /* services */
+  .services{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .svc{
+    background:var(--chalk);border:1px solid var(--line);border-radius:16px;
+    padding:34px;transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .section--paper .svc{background:#fff}
+  .svc:hover{transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(35,39,31,.4)}
+  .svc__no{font-family:var(--display);font-size:.95rem;color:var(--brass);font-style:italic}
+  .svc h3{margin:.4rem 0 .8rem}
+  .svc p{font-size:.98rem}
+  .svc ul{list-style:none;margin-top:1.3rem;display:flex;flex-direction:column;gap:.6rem}
+  .svc li{font-size:.92rem;color:var(--ink);display:flex;gap:.7em;align-items:flex-start}
+  .svc li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--brass);margin-top:.55em}
+  @media(max-width:760px){.services{grid-template-columns:1fr}}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:step}
+  .step{position:relative;padding-top:30px;border-top:2px solid var(--ink)}
+  .step__no{
+    font-family:var(--display);font-size:2.4rem;font-weight:500;line-height:1;
+    color:var(--brass);font-style:italic;
+  }
+  .step h3{font-size:1.25rem;margin:.6rem 0 .6rem}
+  .step p{font-size:.96rem}
+  .step--key{background:var(--ink);color:var(--chalk);border-radius:16px;border-top:none;padding:30px}
+  .step--key p{color:rgba(242,238,229,.74)}
+  .step--key .step__no{color:var(--brass-bright)}
+  @media(max-width:760px){.steps{grid-template-columns:1fr;gap:18px}}
+
+  /* about */
+  .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+  .about__img{
+    aspect-ratio:4/5;border-radius:18px;background:
+      linear-gradient(150deg,var(--olive),var(--ink));
+    position:relative;overflow:hidden;display:flex;align-items:flex-end;
+    border:1px solid var(--line);
+  }
+  .about__img .ph{
+    padding:18px;font-size:.78rem;color:rgba(242,238,229,.6);
+    border:1px dashed var(--line-dark);border-radius:12px;margin:16px;
+  }
+  .about h2{margin:.6rem 0 1.2rem}
+  .about p + p{margin-top:1rem}
+  .creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6rem}
+  .creds span{
+    font-size:.82rem;font-weight:500;background:var(--chalk-2);
+    border:1px solid var(--line);border-radius:100px;padding:.45em 1em;color:var(--ink);
+  }
+  @media(max-width:760px){.about{grid-template-columns:1fr;gap:30px}}
+
+  /* testimonials */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .quote{
+    background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px;
+    display:flex;flex-direction:column;
+  }
+  .quote .mark{font-family:var(--display);font-size:2.6rem;line-height:.6;color:var(--brass);font-style:italic}
+  .quote p{font-size:1rem;color:var(--ink);margin:.4rem 0 1.4rem;flex:1}
+  .quote .who{font-size:.86rem;color:var(--stone);font-weight:500}
+  .quote .who b{color:var(--ink);font-weight:600;display:block;font-family:var(--display)}
+  @media(max-width:860px){.quotes{grid-template-columns:1fr}}
+
+  /* ---------- FORM ---------- */
+  .enquire{background:var(--ink);color:var(--chalk);position:relative;overflow:hidden}
+  .enquire .spring{opacity:.55;margin-bottom:34px}
+  .enquire__grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:54px;align-items:start}
+  .enquire h2{color:var(--chalk)}
+  .enquire .eyebrow{color:var(--brass-bright)}
+  .enquire .eyebrow::before{background:var(--brass-bright)}
+  .enquire__intro p{color:rgba(242,238,229,.74);margin-top:1rem;font-size:1.05rem}
+  .enquire__assure{margin-top:2rem;display:flex;flex-direction:column;gap:1rem}
+  .enquire__assure div{display:flex;gap:.8em;align-items:flex-start;font-size:.95rem;color:rgba(242,238,229,.85)}
+  .enquire__assure svg{flex:none;margin-top:2px;color:var(--brass-bright)}
+
+  form{background:var(--chalk);color:var(--ink);border-radius:18px;padding:clamp(24px,3vw,38px)}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:.5em;letter-spacing:.01em}
+  .field .req{color:var(--brass)}
+  .field input,.field textarea,.field select{
+    width:100%;font-family:var(--body);font-size:1rem;color:var(--ink);
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:.8em .9em;transition:border-color .2s, box-shadow .2s;
+  }
+  .field textarea{min-height:96px;resize:vertical}
+  .field input:focus,.field textarea:focus,.field select:focus{
+    outline:none;border-color:var(--brass);box-shadow:0 0 0 3px rgba(168,127,51,.18);
+  }
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:520px){.row{grid-template-columns:1fr}}
+
+  fieldset{border:none}
+  fieldset legend{font-size:.82rem;font-weight:600;margin-bottom:.7em;letter-spacing:.01em}
+  .choices{display:flex;flex-direction:column;gap:10px}
+  .choice{
+    display:flex;gap:.8em;align-items:flex-start;cursor:pointer;
+    border:1px solid var(--line);border-radius:11px;padding:.85em 1em;
+    background:#fff;transition:border-color .2s, background .2s;
+  }
+  .choice:hover{border-color:var(--stone-light)}
+  .choice input{accent-color:var(--brass);margin-top:.25em;width:auto;flex:none}
+  .choice:has(input:checked){border-color:var(--brass);background:#fff8ec}
+  .choice .c-title{font-weight:600;font-size:.95rem;display:block}
+  .choice .c-sub{font-size:.84rem;color:var(--stone)}
+  .seg{display:flex;flex-wrap:wrap;gap:8px}
+  .seg label{
+    border:1px solid var(--line);border-radius:100px;padding:.5em 1.1em;
+    font-size:.88rem;font-weight:500;cursor:pointer;background:#fff;transition:.2s;
+  }
+  .seg label:hover{border-color:var(--stone-light)}
+  .seg input{position:absolute;opacity:0;width:0;height:0}
+  .seg label:has(input:checked){background:var(--ink);color:var(--chalk);border-color:var(--ink)}
+
+  .form__submit{margin-top:8px}
+  .form__submit .btn{width:100%;justify-content:center}
+  .form__note{font-size:.8rem;color:var(--stone);text-align:center;margin-top:14px}
+
+  .form__success{display:none;text-align:center;padding:30px 10px}
+  .form__success.show{display:block}
+  .form__success .tick{
+    width:62px;height:62px;border-radius:50%;background:var(--olive);color:#fff;
+    display:flex;align-items:center;justify-content:center;margin:0 auto 18px;
+  }
+  .form__success h3{margin-bottom:.5rem}
+  .form__success p{margin:0 auto;color:var(--stone)}
+  .form__success button{margin-top:18px}
+
+  @media(max-width:860px){.enquire__grid{grid-template-columns:1fr;gap:34px}}
+
+  /* ---------- FOOTER ---------- */
+  footer.foot{background:var(--olive);color:var(--chalk);padding:64px 0 30px}
+  .foot__top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;margin-bottom:48px}
+  .foot__brand .brand{color:var(--chalk);margin-bottom:1rem}
+  .foot__brand p{color:rgba(242,238,229,.7);font-size:.95rem;max-width:34ch}
+  .foot h5{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-bright);margin-bottom:1rem;font-weight:600}
+  .foot ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+  .foot ul a,.foot ul li{font-size:.95rem;color:rgba(242,238,229,.82)}
+  .foot ul a:hover{color:#fff}
+  .foot__bottom{border-top:1px solid var(--line-dark);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.82rem;color:rgba(242,238,229,.6)}
+  @media(max-width:760px){.foot__top{grid-template-columns:1fr;gap:28px}}
+
+  /* hero credibility row */
+  .hero__creds{
+    display:flex;flex-wrap:wrap;gap:.5em 1.4em;margin-top:1.6rem;
+    font-size:.8rem;letter-spacing:.04em;color:var(--stone);font-weight:500;
+  }
+  .hero__creds span{display:inline-flex;align-items:center;gap:.7em}
+  .hero__creds span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--brass)}
+
+  /* "as seen at" proof strip */
+  .proof{border-bottom:1px solid var(--line);background:var(--chalk)}
+  .proof__inner{padding:34px 0 38px;text-align:center}
+  .proof__label{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--stone);font-weight:600;margin-bottom:18px}
+  .proof__logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px 40px}
+  .proof__logos span{
+    font-family:var(--display);font-size:1.18rem;font-weight:600;letter-spacing:.02em;
+    color:var(--ink);opacity:.78;transition:opacity .2s;
+  }
+  .proof__logos span:hover{opacity:1}
+  @media(max-width:560px){.proof__logos span{font-size:1rem}}
+
+  /* floating whatsapp */
+  .wa-float{
+    position:fixed;right:20px;bottom:20px;z-index:80;
+    display:inline-flex;align-items:center;gap:.6em;
+    background:#1f8f57;color:#fff;font-weight:600;font-size:.92rem;
+    padding:.8em 1.2em .8em 1em;border-radius:100px;
+    box-shadow:0 10px 30px -8px rgba(31,143,87,.6);transition:transform .2s, box-shadow .2s;
+  }
+  .wa-float:hover{transform:translateY(-2px);box-shadow:0 14px 34px -8px rgba(31,143,87,.7)}
+  .wa-float svg{flex:none}
+  @media(max-width:560px){.wa-float span{display:none}.wa-float{padding:.9em}}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a href="#top" class="brand" aria-label="Home">
+      <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+        <path d="M2 11c2.5 0 2.5-6 5-6s2.5 12 5 12 2.5-6 5-6" fill="none" stroke="#a87f33" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      Alexandra Grace
+    </a>
+    <nav class="nav__links">
+      <a href="#work">Sessions</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="#enquire" class="btn btn--primary nav__cta">Book a session</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div class="reveal">
+        <span class="eyebrow">London · Pilates &amp; Lagree</span>
+        <h1>Strength, built <em>slowly</em>. Wherever you are in London.</h1>
+        <p class="hero__lead">One-to-one Pilates and Lagree, tailored to your body and your goals. I bring the coaching to you — and sort the studio if you need one.</p>
+        <div class="hero__actions">
+          <a href="#enquire" class="btn btn--primary">Enquire about sessions <span class="arrow">↗</span></a>
+          <a href="#how" class="btn btn--ghost">See how it works</a>
+        </div>
+        <div class="hero__creds">
+          <span>Royal Ballet School trained</span>
+          <span>10+ years' experience</span>
+          <span>Reformer &amp; Lagree certified</span>
+        </div>
+      </div>
+
+      <aside class="hero__panel reveal">
+        <span class="tag">No studio? No problem</span>
+        <h4>I come to you</h4>
+        <p>Train at a studio, at your gym, or at home. When you enquire, just tell me whether you'd like me to book a fully-equipped studio — or whether you've got your own space and kit.</p>
+        <div class="hero__photo-note">Replace this panel with a photo of you mid-session for a stronger first impression.</div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- spring signature -->
+  <div class="wrap" style="margin-top:clamp(40px,6vw,72px)">
+    <svg class="spring js-spring" viewBox="0 0 1000 48" preserveAspectRatio="none" aria-hidden="true">
+      <path d="" />
+    </svg>
+  </div>
+</section>
+
+<!-- ===================== PROOF / AS SEEN AT ===================== -->
+<section class="proof">
+  <div class="wrap proof__inner reveal">
+    <div class="proof__label">Coaching at London's leading studios</div>
+    <div class="proof__logos">
+      <span>Heartcore</span>
+      <span>MAD</span>
+      <span>Reformer Room</span>
+      <span>Frame</span>
+      <span>BXR</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== USP STRIP ===================== -->
+<section class="strip">
+  <div class="wrap strip__inner">
+    <div class="strip__item"><strong>Fully mobile</strong><span>Sessions across central, north, east, south &amp; west London.</span></div>
+    <div class="strip__item"><strong>Studio, sorted</strong><span>I'll book equipped studio space for you — or work with yours.</span></div>
+    <div class="strip__item"><strong>Built around you</strong><span>Every session shaped to your body, level and goals.</span></div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="section section--paper" id="work">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <span class="eyebrow">The sessions</span>
+      <h2>Two ways to get strong</h2>
+      <p>Pilates and Lagree share a love of control and time under tension — but they feel different in the body. Not sure which suits you? We'll work it out together.</p>
+    </div>
+    <div class="services">
+      <article class="svc reveal">
+        <span class="svc__no">01 — Pilates</span>
+        <h3>Reformer &amp; mat Pilates</h3>
+        <p>Precise, controlled movement that builds deep core strength, mobility and posture. Ideal for rehab, building a foundation, or training smarter alongside other sport.</p>
+        <ul>
+          <li>Core stability, alignment and control</li>
+          <li>Gentle on joints, scalable to any level</li>
+          <li>Great for injury recovery and posture</li>
+        </ul>
+      </article>
+      <article class="svc reveal">
+        <span class="svc__no">02 — Lagree</span>
+        <h3>Lagree (Megaformer) training</h3>
+        <p>High-intensity, low-impact strength work on slow, deliberate tempos. Expect to shake. Brilliant for muscular endurance, tone and torching a workout in 45 focused minutes.</p>
+        <ul>
+          <li>Slow, intense, low-impact resistance</li>
+          <li>Builds endurance and lean strength fast</li>
+          <li>Efficient — serious results in less time</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>From enquiry to first session</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step__no">01</div>
+        <h3>Tell me your goals</h3>
+        <p>Send an enquiry with what you're after, your experience and where in London you're based. I'll reply within 24 hours.</p>
+      </div>
+      <div class="step step--key reveal">
+        <div class="step__no">02</div>
+        <h3>Studio? Your call</h3>
+        <p>On the form, choose whether I should book an equipped studio for you, or whether you've got your own space and kit. Either works — no studio of your own required.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step__no">03</div>
+        <h3>Train &amp; progress</h3>
+        <p>We start with an assessment, agree a plan, and build from there — adjusting every session as you get stronger.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="section section--paper" id="about">
+  <div class="wrap about">
+    <div class="about__img reveal" aria-hidden="true">
+      <div class="ph">Add a portrait of you here — replace this gradient with your photo.</div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2>Hi, I'm Alexandra</h2>
+      <p>I trained at The Royal Ballet School, and that early grounding in precision, discipline and how the body truly moves still shapes every session I teach. Ballet taught me that real strength is built slowly, with control — and that's the principle at the heart of my coaching.</p>
+      <p>Over the past 10+ years I've taught Pilates and Lagree to private clients and at some of London's most respected studios — including Heartcore, MAD, Reformer Room, Frame and BXR. I'm both Reformer and Lagree certified, and I tailor everything to you: your body, your level and your goals. No two clients are the same, so no two sessions are either.</p>
+      <div class="creds">
+        <span>Royal Ballet School trained</span>
+        <span>Reformer certified</span>
+        <span>Lagree certified</span>
+        <span>10+ years' experience</span>
+        <span>Private clients &amp; studios</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <span class="eyebrow">Kind words</span>
+      <h2>What clients say</h2>
+    </div>
+    <div class="quotes">
+      <figure class="quote reveal">
+        <div class="mark">"</div>
+        <p>[Add a real client testimonial here. A specific result — like better posture or returning to running pain-free — is far more persuasive than general praise.]</p>
+        <figcaption class="who"><b>[Client name]</b>[Area of London]</figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <div class="mark">"</div>
+        <p>[Add a second testimonial. Mention the studio-booking convenience if a client valued not having to organise space themselves.]</p>
+        <figcaption class="who"><b>[Client name]</b>[Area of London]</figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <div class="mark">"</div>
+        <p>[Add a third testimonial. Quotes about feeling stronger, more confident or consistent work brilliantly here.]</p>
+        <figcaption class="who"><b>[Client name]</b>[Area of London]</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ENQUIRY FORM ===================== -->
+<section class="section enquire" id="enquire">
+  <div class="wrap">
+    <svg class="spring js-spring" viewBox="0 0 1000 48" preserveAspectRatio="none" aria-hidden="true"><path d=""/></svg>
+    <div class="enquire__grid">
+      <div class="enquire__intro reveal">
+        <span class="eyebrow">Enquire</span>
+        <h2>Let's get you started</h2>
+        <p>Tell me a little about you and what you're looking for. I'll reply within 24 hours with availability and next steps.</p>
+        <div class="enquire__assure">
+          <div>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>No obligation — it's just an enquiry, not a booking.</span>
+          </div>
+          <div>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Choose whether I book the studio, or use your own space.</span>
+          </div>
+          <div>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Beginners welcome — every session is built to your level.</span>
+          </div>
+        </div>
+        <a href="https://wa.me/447799305100" class="btn btn--ghost" style="margin-top:1.8rem;color:var(--chalk);border-color:var(--line-dark)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Zm4.4-5.6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8.9-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2 0-.2 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1c0 1.2.9 2.4 1 2.6s1.7 2.7 4.2 3.8c1.6.7 2.2.7 3 .6.5 0 1.4-.6 1.6-1.1s.2-1 .1-1.1-.2-.2-.4-.3Z"/></svg>
+          Prefer to message? WhatsApp me
+        </a>
+      </div>
+
+      <div class="reveal">
+        <form id="enquiryForm" novalidate>
+          <div class="row">
+            <div class="field">
+              <label for="name">Name <span class="req">*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="phone">Phone <span style="color:var(--stone);font-weight:400">(optional)</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label for="area">Area of London <span class="req">*</span></label>
+              <input id="area" name="area" type="text" placeholder="e.g. Clapham, Shoreditch" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Which sessions interest you? <span class="req">*</span></label>
+            <div class="seg" role="radiogroup" aria-label="Session type">
+              <label><input type="radio" name="sessions" value="Pilates" required /> Pilates</label>
+              <label><input type="radio" name="sessions" value="Lagree" /> Lagree</label>
+              <label><input type="radio" name="sessions" value="Both" /> Both</label>
+              <label><input type="radio" name="sessions" value="Not sure" /> Not sure yet</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <fieldset>
+              <legend>Do you need me to book studio space? <span class="req">*</span></legend>
+              <div class="choices">
+                <label class="choice">
+                  <input type="radio" name="studio" value="Please book a studio for me" required />
+                  <span><span class="c-title">Yes — please book a studio for me</span><span class="c-sub">I'll arrange equipped studio space and add it to your session.</span></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="studio" value="I have my own space / equipment" />
+                  <span><span class="c-title">No — I have my own space or equipment</span><span class="c-sub">Home, your gym, or a studio you already use.</span></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="studio" value="Not sure — let's discuss" />
+                  <span><span class="c-title">Not sure — let's discuss the options</span><span class="c-sub">We'll find what works best for you and your budget.</span></span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="field">
+            <label>Your experience</label>
+            <div class="seg" role="radiogroup" aria-label="Experience level">
+              <label><input type="radio" name="experience" value="New to this" /> New to this</label>
+              <label><input type="radio" name="experience" value="Some experience" /> Some experience</label>
+              <label><input type="radio" name="experience" value="Experienced" /> Experienced</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="goals">Your goals or anything else</label>
+            <textarea id="goals" name="goals" placeholder="What are you hoping to achieve? Any injuries, preferred days/times, or questions?"></textarea>
+          </div>
+
+          <div class="form__submit">
+            <button type="submit" class="btn btn--brass">Send enquiry <span class="arrow">↗</span></button>
+            <p class="form__note">I'll get back to you within 24 hours.</p>
+          </div>
+        </form>
+
+        <div class="form__success" id="formSuccess">
+          <div class="tick">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5 9-10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Enquiry on its way</h3>
+          <p>Thanks — I've got your details and I'll be in touch within 24 hours to talk through sessions and studio options.</p>
+          <button type="button" class="btn btn--ghost" id="resetForm" style="border-color:var(--line)">Send another</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <a href="#top" class="brand">
+          <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+            <path d="M2 11c2.5 0 2.5-6 5-6s2.5 12 5 12 2.5-6 5-6" fill="none" stroke="#c39a48" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Alexandra Grace
+        </a>
+        <p>Personal Pilates &amp; Lagree training, brought to you across London.</p>
+      </div>
+      <div>
+        <h5>Get in touch</h5>
+        <ul>
+          <li><a href="mailto:aglivermore@hotmail.co.uk">aglivermore@hotmail.co.uk</a></li>
+          <li><a href="https://wa.me/447799305100">WhatsApp · +44 7799 305100</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#work">Sessions</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#enquire">Book a session</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>© <span id="year"></span> Alexandra Grace. Personal training in London.</span>
+      <span>Pilates · Lagree · One-to-one</span>
+    </div>
+  </div>
+</footer>
+
+<!-- floating WhatsApp -->
+<a class="wa-float" href="https://wa.me/447799305100" aria-label="Message Alexandra on WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Zm4.4-5.6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8.9-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2 0-.2 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1c0 1.2.9 2.4 1 2.6s1.7 2.7 4.2 3.8c1.6.7 2.2.7 3 .6.5 0 1.4-.6 1.6-1.1s.2-1 .1-1.1-.2-.2-.4-.3Z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script>
+/* ============================================================
+   CONFIG — set these two and the form is ready.
+   ------------------------------------------------------------
+   CONTACT_EMAIL : where enquiries go (used by the mailto fallback).
+   FORM_ENDPOINT : leave "" to use the email fallback (works instantly,
+                   no signup). For a tidier inbox + no email client
+                   pop-up, paste a free endpoint from:
+                     • https://web3forms.com  (paste your access key URL)
+                     • https://formspree.io   (paste your form URL)
+   ============================================================ */
+const CONTACT_EMAIL = "aglivermore@hotmail.co.uk";
+const FORM_ENDPOINT = ""; // e.g. "https://api.web3forms.com/submit" or your Formspree URL
+const WEB3FORMS_ACCESS_KEY = ""; // only if using Web3Forms
+
+/* ---- year ---- */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ---- draw the spring signature line responsively ---- */
+function drawSprings(){
+  document.querySelectorAll('.js-spring path').forEach(path=>{
+    const W=1000, H=48, mid=H/2, coils=26, amp=15;
+    let d=`M0 ${mid}`;
+    for(let i=0;i<coils;i++){
+      const x0=(i/coils)*W, x1=((i+0.5)/coils)*W, x2=((i+1)/coils)*W;
+      d+=` C ${x0+12} ${mid-amp}, ${x1-12} ${mid-amp}, ${x1} ${mid}`;
+      d+=` C ${x1+12} ${mid+amp}, ${x2-12} ${mid+amp}, ${x2} ${mid}`;
+    }
+    path.setAttribute('d',d);
+    const len=path.getTotalLength();
+    path.style.strokeDasharray=len;
+    path.style.strokeDashoffset=len;
+  });
+}
+drawSprings();
+
+/* ---- reveal on scroll + animate springs ---- */
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('in');
+      if(e.target.classList.contains('js-spring')){
+        const p=e.target.querySelector('path');
+        p.style.transition='stroke-dashoffset 1.6s ease';
+        requestAnimationFrame(()=>{p.style.strokeDashoffset='0';});
+      }
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.18});
+document.querySelectorAll('.reveal,.js-spring').forEach(el=>io.observe(el));
+
+/* ---- form handling ---- */
+const form=document.getElementById('enquiryForm');
+const success=document.getElementById('formSuccess');
+
+form.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+
+  // basic validation
+  if(!form.checkValidity()){
+    form.reportValidity();
+    return;
+  }
+  const studioChosen=form.querySelector('input[name="studio"]:checked');
+  const sessionChosen=form.querySelector('input[name="sessions"]:checked');
+  if(!sessionChosen){ alert('Please choose which sessions interest you.'); return; }
+  if(!studioChosen){ alert('Please let me know about studio space.'); return; }
+
+  const data=Object.fromEntries(new FormData(form).entries());
+  const btn=form.querySelector('button[type="submit"]');
+  btn.disabled=true; btn.textContent='Sending…';
+
+  const showSuccess=()=>{ form.style.display='none'; success.classList.add('show'); };
+
+  try{
+    if(FORM_ENDPOINT){
+      const payload={...data};
+      if(WEB3FORMS_ACCESS_KEY) payload.access_key=WEB3FORMS_ACCESS_KEY;
+      payload.subject='New training enquiry from '+(data.name||'website');
+      const res=await fetch(FORM_ENDPOINT,{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify(payload)
+      });
+      if(res.ok){ showSuccess(); } else { throw new Error('Bad response'); }
+    }else{
+      // email fallback — opens the visitor's email client, pre-filled
+      const subject=encodeURIComponent('Training enquiry — '+(data.name||''));
+      const body=encodeURIComponent(
+        `Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone||'—'}\n`+
+        `Area of London: ${data.area}\nSessions: ${data.sessions}\n`+
+        `Studio space: ${data.studio}\nExperience: ${data.experience||'—'}\n\n`+
+        `Goals / notes:\n${data.goals||'—'}`
+      );
+      window.location.href=`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+      showSuccess();
+    }
+  }catch(err){
+    btn.disabled=false; btn.textContent='Send enquiry ↗';
+    alert("Sorry — something went wrong sending that. Please email me directly at "+CONTACT_EMAIL);
+  }
+});
+
+document.getElementById('resetForm').addEventListener('click',()=>{
+  form.reset();
+  form.style.display='block';
+  success.classList.remove('show');
+  const btn=form.querySelector('button[type="submit"]');
+  btn.disabled=false; btn.innerHTML='Send enquiry <span class="arrow">↗</span>';
+});
+</script>
+</body>
+</html>
