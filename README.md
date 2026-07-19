@@ -1,4 +1,4 @@
-# Alexandra Grace — Pilates & Lagree, London
+# Alexandra Grace — Personal Pilates, London
 
 A single-page lead-generation site. Everything is in `index.html` (no build step, no dependencies).
 
@@ -17,7 +17,7 @@ git clone https://github.com/joejeffery4/AlexandraGrace.git
 cd AlexandraGrace
 # copy index.html into this folder, then:
 git add index.html
-git commit -m "Add Pilates & Lagree landing page"
+git commit -m "Add Pilates landing page"
 git push origin main
 ```
 Then enable Pages as in step 4 above.
