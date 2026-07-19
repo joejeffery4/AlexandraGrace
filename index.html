@@ -3,8 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Alexandra Grace — Personal Pilates Training in London</title>
-<meta name="description" content="One-to-one Pilates with Alexandra Grace — Royal Ballet School trained, 10+ years' experience, coaching at London's leading studios. I come to you, and book the studio if you need one." />
+<title>Alexandra Grace — Personal Reformer Pilates in London</title>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://alexandragracepilates.com/" />
+<meta property="og:title" content="Alexandra Grace — Personal Reformer Pilates in London" />
+<meta property="og:description" content="One-to-one reformer Pilates. Royal Ballet School trained, 10+ years' experience. I come to you, and book the studio if you need one." />
+<meta property="og:image" content="https://alexandragracepilates.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="description" content="One-to-one reformer Pilates with Alexandra Grace — Royal Ballet School trained, 10+ years' experience, coaching at London's leading studios. I come to you, and book the studio if you need one." />
 
 <!-- ============================================================
      The only things left to add are your testimonials (search
@@ -185,6 +191,9 @@
     position:relative;overflow:hidden;display:flex;align-items:flex-end;
     border:1px solid var(--line);
   }
+  .about__img img{width:100%;height:100%;object-fit:cover;display:block}
+  .ballet-band{margin-top:clamp(48px,7vw,84px)}
+  .ballet-band img{display:block;width:100%;height:auto}
   .about__img .ph{
     padding:18px;font-size:.78rem;color:rgba(242,238,229,.6);
     border:1px dashed var(--line-dark);border-radius:12px;margin:16px;
@@ -354,9 +363,9 @@
   <div class="wrap">
     <div class="hero__grid">
       <div class="reveal">
-        <span class="eyebrow">London · Personal Pilates</span>
+        <span class="eyebrow">London · Reformer Pilates</span>
         <h1>Strength, built <em>slowly</em>. Wherever you are in London.</h1>
-        <p class="hero__lead">One-to-one Pilates, tailored to your body and your goals. I bring the coaching to you — and sort the studio if you need one.</p>
+        <p class="hero__lead">One-to-one reformer Pilates, tailored to your body and your goals. I bring the coaching to you — and sort the studio if you need one.</p>
         <div class="hero__actions">
           <a href="#enquire" class="btn btn--primary">Enquire about sessions <span class="arrow">↗</span></a>
           <a href="#how" class="btn btn--ghost">See how it works</a>
@@ -372,7 +381,6 @@
         <span class="tag">No studio? No problem</span>
         <h4>I come to you</h4>
         <p>Train at a studio, at your gym, or at home. When you enquire, just tell me whether you'd like me to book a fully-equipped studio — or whether you've got your own space and kit.</p>
-        <div class="hero__photo-note">Replace this panel with a photo of you mid-session for a stronger first impression.</div>
       </aside>
     </div>
   </div>
@@ -414,12 +422,12 @@
     <div class="section__head reveal">
       <span class="eyebrow">The sessions</span>
       <h2>Two ways to get strong</h2>
-      <p>Classical Pilates and high-intensity reformer work share a love of control and time under tension — but they feel different in the body. Not sure which suits you? We'll work it out together.</p>
+      <p>Both sessions are built on the reformer — one classical and precise, one athletic and intense — and they feel very different in the body. Not sure which suits you? We'll work it out together.</p>
     </div>
     <div class="services">
       <article class="svc reveal">
-        <span class="svc__no">01 — Pilates</span>
-        <h3>Reformer &amp; mat Pilates</h3>
+        <span class="svc__no">01 — Classical</span>
+        <h3>Classical reformer Pilates</h3>
         <p>Precise, controlled movement that builds deep core strength, mobility and posture. Ideal for rehab, building a foundation, or training smarter alongside other sport.</p>
         <ul>
           <li>Core stability, alignment and control</li>
@@ -468,17 +476,21 @@
   </div>
 </section>
 
+<div class="ballet-band reveal">
+  <img src="images/ballet-banner.jpg" alt="" loading="lazy" />
+</div>
+
 <!-- ===================== ABOUT ===================== -->
 <section class="section section--paper" id="about">
   <div class="wrap about">
-    <div class="about__img reveal" aria-hidden="true">
-      <div class="ph">Add a portrait of you here — replace this gradient with your photo.</div>
+    <div class="about__img reveal">
+      <img src="images/alexandra-portrait.jpg" alt="Alexandra Grace, leg extended in a ballet line against a concrete wall" loading="lazy" />
     </div>
     <div class="reveal">
       <span class="eyebrow">About</span>
       <h2>Hi, I'm Alexandra</h2>
       <p>I trained at The Royal Ballet School, and that early grounding in precision, discipline and how the body truly moves still shapes every session I teach. Ballet taught me that real strength is built slowly, with control — and that's the principle at the heart of my coaching.</p>
-      <p>Over the past 10+ years I've taught reformer and mat Pilates to private clients and at some of London's most respected studios — including Heartcore, MAD, Reformer Room, Frame and BXR. I'm Reformer certified, and I tailor everything to you: your body, your level and your goals. No two clients are the same, so no two sessions are either.</p>
+      <p>Over the past 10+ years I've taught reformer Pilates to private clients and at some of London's most respected studios — including Heartcore, MAD, Reformer Room, Frame and BXR. I'm Reformer certified, and I tailor everything to you: your body, your level and your goals. No two clients are the same, so no two sessions are either.</p>
       <div class="creds">
         <span>Royal Ballet School trained</span>
         <span>Reformer certified</span>
@@ -572,7 +584,7 @@
           <div class="field">
             <label>Which sessions interest you? <span class="req">*</span></label>
             <div class="seg" role="radiogroup" aria-label="Session type">
-              <label><input type="radio" name="sessions" value="Pilates" required /> Pilates</label>
+              <label><input type="radio" name="sessions" value="Classical reformer" required /> Classical reformer</label>
               <label><input type="radio" name="sessions" value="High-intensity reformer" /> High-intensity reformer</label>
               <label><input type="radio" name="sessions" value="Both" /> Both</label>
               <label><input type="radio" name="sessions" value="Not sure" /> Not sure yet</label>
@@ -643,7 +655,7 @@
           </svg>
           Alexandra Grace
         </a>
-        <p>Personal Pilates training, brought to you across London.</p>
+        <p>Personal reformer Pilates, brought to you across London.</p>
       </div>
       <div>
         <h5>Get in touch</h5>
@@ -664,7 +676,7 @@
     </div>
     <div class="foot__bottom">
       <span>© <span id="year"></span> Alexandra Grace. Personal training in London.</span>
-      <span>Pilates · Reformer · One-to-one</span>
+      <span>Reformer Pilates · One-to-one</span>
     </div>
   </div>
 </footer>
